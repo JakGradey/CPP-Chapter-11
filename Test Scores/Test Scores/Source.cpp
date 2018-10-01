@@ -4,39 +4,38 @@ using namespace std;
 
 int main() {
 
-	double average;
-	double highScore = 100;
-	double lowScore = 0;
-	double testScore;
-	string result;
-	result = "Enter another score ";
-	double scoreArray[10] = { 0.0 };
+	double highScore = 0;
+	double lowScore = 100;
+	double scoreArray[9] = { 0.0 };
 
-	for (int i = 0; i <= 10; i++) {
+	for (int i = 0; i <= size(scoreArray); i++) {
 
-		cout << "Enter a test score or 9999 to quit>> ";
-		cin >> testScore;
+		cout << "Enter a test score >> ";
+		cin >> scoreArray[i];
 
-//		if (testScore < 0 || testScore > 100) {
-//			cout << result;
-
-			if (testScore >= 0 && testScore <= 100) {
-				if (testScore >= highScore) {
-					highScore = testScore;
-					scoreArray[i] = 
-				}
-				else if (testScore <= lowScore) {
-					lowScore = testScore;
-				}
-			}
-		}
-
-	if (scoreArray[i] >= 0 && scoreArray[i] <= 100) {
-		if (scoreArray[i] >= high) {
-			high = scoreArray[i];
-		}
+	if (scoreArray[i] >= highScore) {
+		highScore = scoreArray[i];
+		scoreArray[i]++;
 	}
-		system("pause");
-		return 0;
+	else if (scoreArray[i] <= lowScore) {
+		lowScore = scoreArray[i];
+		scoreArray[i]++;
+	}	
+}
+	double totalScoreArray = 0;
+
+	for (int n = 0; n < size(scoreArray); n++)
+	{
+		totalScoreArray += scoreArray[n];
 	}
-//}
+	double average = totalScoreArray / 10;
+
+	cout << "High score : " << highScore << endl;
+	cout << "Low score : " << lowScore << endl;
+	cout << "Average : " << average << endl;
+	cout << "" << endl;
+	cout << 
+
+	system("pause");
+	return 0;
+}
