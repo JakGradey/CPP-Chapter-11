@@ -6,9 +6,9 @@ int main() {
 
 	double highScore = 0;
 	double lowScore = 100;
-	double scoreArray[9] = { 0.0 };
+	double scoreArray[10] = { 0.0 };
 
-	for (int i = 0; i <= size(scoreArray); i++) {
+	for (int i = 0; i < size(scoreArray); i++) {
 
 		cout << "Enter a test score >> ";
 		cin >> scoreArray[i];
@@ -34,7 +34,11 @@ int main() {
 	cout << "Low score : " << lowScore << endl;
 	cout << "Average : " << average << endl;
 	cout << "" << endl;
-	cout << 
+	for (int x = 0; x < size(scoreArray); x++) {
+
+		cout << scoreArray[x] << endl;
+
+	}
 
 	system("pause");
 	return 0;
